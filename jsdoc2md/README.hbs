@@ -1,0 +1,70 @@
+# ai-scripting-utils
+
+A JavaScript utility library for those who write scripts to automate tasks in Adobe Illustrator.
+
+The library provides many different helper functions intended to speed up the process of writing scripts. The functions are useful for working with this kind of objects:
+
+- Native JavaScript objects and primitives
+- DOM objects
+- [`Rect`](#Rect) objects that are just arrays representing rectangles (e.g. `pathItem.geometricBounds`)
+- [`Point`](#Point) objects
+
+## Usage
+
+First download the `ai-scripting-utils.jsx` file from this repository: [ai-scripting-utils.jsx](https://raw.githubusercontent.com/vabushkevich/ai-scripting-utils/0.1.0/ai-scripting-utils.jsx).
+
+### $.evalFile()
+
+Use the `$.evalFile(path)` function to import the library. `path` - is the absolute file path to the `ai-scripting-utils.jsx` file.
+
+```javascript
+var _ = $.evalFile("/home/you/ai-scripting-utils.jsx");
+var rectangle = _.drawRect(20, 10);
+```
+
+To specify the path relative to the current script location you should construct the path this way:
+
+```javascript
+var _ = $.evalFile($.fileName + "/../ai-scripting-utils.jsx");
+```
+
+### #include
+
+Use the `#include "path"` statement to import the library. `path` - is the file path that can be absolute or relative to the current script file.
+
+Using this method you should also call `importAIScriptingUtils()` global function to load the library.
+
+```javascript
+#include "./ai-scripting-utils.jsx"
+var _ = importAIScriptingUtils();
+var rectangle = _.drawRect(20, 10);
+```
+
+### Inline
+
+You can also just copy the `ai-scripting-utils.jsx` file contents and paste it in the beginning of your script.
+
+```javascript
+// *** `ai-scripting-utils.jsx` contents goes here ***
+var _ = importAIScriptingUtils();
+var rectangle = _.drawRect(20, 10);
+```
+
+## API Reference
+
+{{#module name="ai-scripting-utils"}}
+{{>body~}}
+{{>member-index~}}
+{{>separator~}}
+{{>members~}}
+{{/module}}
+
+{{#orphans kind="typedef"}}
+<a name="{{{anchorName}}}"></a>
+
+### {{>sig-name}}
+{{>body}}
+{{>member-index~}}
+{{>separator~}}
+{{>members~}}
+{{/orphans}}
