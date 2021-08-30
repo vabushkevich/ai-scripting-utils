@@ -150,7 +150,7 @@ var rectangle = _.drawRect(20, 10);
         * [.expandRect(rect, amount)](#module_ai-scripting-utils.expandRect) ⇒ [<code>Rect</code>](#Rect)
         * [.expandRect(rect, hor, ver)](#module_ai-scripting-utils.expandRect) ⇒ [<code>Rect</code>](#Rect)
         * [.translateRect(rect, dx, dy)](#module_ai-scripting-utils.translateRect) ⇒ [<code>Rect</code>](#Rect)
-        * [.moveRect(rect, toPoint, fromPoint)](#module_ai-scripting-utils.moveRect) ⇒ [<code>Rect</code>](#Rect)
+        * [.moveRect(rect, toPoint, [fromPoint])](#module_ai-scripting-utils.moveRect) ⇒ [<code>Rect</code>](#Rect)
         * [.alignRect(rect, target, side)](#module_ai-scripting-utils.alignRect) ⇒ [<code>Rect</code>](#Rect)
         * [.offsetRectFrom(rect, target, side, [amount])](#module_ai-scripting-utils.offsetRectFrom) ⇒ [<code>Rect</code>](#Rect)
     * _String Functions_
@@ -1265,7 +1265,7 @@ Translates `rect` by the given horizontal and vertical amount. Returnsthe new r
 
 <a name="module_ai-scripting-utils.moveRect"></a>
 
-### _.moveRect(rect, toPoint, fromPoint) ⇒ [<code>Rect</code>](#Rect)
+### _.moveRect(rect, toPoint, [fromPoint]) ⇒ [<code>Rect</code>](#Rect)
 Moves `rect` to the specified point. Returns the new rectangle.
 
 **Returns**: [<code>Rect</code>](#Rect) - The new moved rectangle.  
@@ -1274,7 +1274,7 @@ Moves `rect` to the specified point. Returns the new rectangle.
 | --- | --- | --- | --- |
 | rect | [<code>Rect</code>](#Rect) |  | The rectangle to move. |
 | toPoint | [<code>Point</code>](#Point) |  | The point to move to. |
-| fromPoint | [<code>Point</code>](#Point) | <code>[rect[0],</code> | rect[1]] The point to move from. Defaults to the top left corner of `rect`. |
+| [fromPoint] | [<code>Point</code>](#Point) | <code>[rect[0], rect[1]]</code> | The point to move from. Defaults to the top left corner of `rect`. |
 
 <a name="module_ai-scripting-utils.alignRect"></a>
 
