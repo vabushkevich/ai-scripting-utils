@@ -553,7 +553,7 @@
      * @memberof module:ai-scripting-utils
      * @category String Functions
      * @param {string} string The string to trim.
-     * @param {string} [chars=" "] The characters to trim.
+     * @param {string} [chars=​ ​] The characters to trim.
      * @returns {string} The trimmed `string`.
      */
     function trim(string, chars) {
@@ -566,7 +566,7 @@
      * @memberof module:ai-scripting-utils
      * @category String Functions
      * @param {string} string The string to trim.
-     * @param {string} [chars=" "] The characters to trim.
+     * @param {string} [chars=​ ​] The characters to trim.
      * @returns {string} The trimmed `string`.
      */
     function trimStart(string, chars) {
@@ -582,7 +582,7 @@
      * @memberof module:ai-scripting-utils
      * @category String Functions
      * @param {string} string The string to trim.
-     * @param {string} [chars=" "] The characters to trim.
+     * @param {string} [chars=​ ​] The characters to trim.
      * @returns {string} The trimmed `string`.
      */
     function trimEnd(string, chars) {
@@ -656,7 +656,7 @@
      * @category String Functions
      * @param {string} string The string to pad.
      * @param {number} [length=0] The padding length.
-     * @param {string} [chars=" "] The padding string.
+     * @param {string} [chars=​ ​] The padding string.
      * @returns {string} The padded string.
      */
     function pad(string, length, chars) {
@@ -671,7 +671,7 @@
      * @category String Functions
      * @param {string} string The string to pad.
      * @param {number} [length=0] The padding length.
-     * @param {string} [chars=" "] The padding string.
+     * @param {string} [chars=​ ​] The padding string.
      * @returns {string} The padded string.
      */
     function padStart(string, length, chars) {
@@ -686,7 +686,7 @@
      * @category String Functions
      * @param {string} string The string to pad.
      * @param {number} [length=0] The padding length.
-     * @param {string} [chars=" "] The padding string.
+     * @param {string} [chars=​ ​] The padding string.
      * @returns {string} The padded string.
      */
     function padEnd(string, length, chars) {
