@@ -1325,7 +1325,7 @@ Removes specified characters from both ends of `string`.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | string | <code>string</code> |  | The string to trim. |
-| [chars] | <code>string</code> | <code>&quot;\&quot; \&quot;&quot;</code> | The characters to trim. |
+| [chars] | <code>string</code> | <code>&quot;​ ​&quot;</code> | The characters to trim. |
 
 <a name="module_ai-scripting-utils.trimStart"></a>
 
@@ -1337,7 +1337,7 @@ Removes specified characters from the beginning of `string`.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | string | <code>string</code> |  | The string to trim. |
-| [chars] | <code>string</code> | <code>&quot;\&quot; \&quot;&quot;</code> | The characters to trim. |
+| [chars] | <code>string</code> | <code>&quot;​ ​&quot;</code> | The characters to trim. |
 
 <a name="module_ai-scripting-utils.trimEnd"></a>
 
@@ -1349,7 +1349,7 @@ Removes specified characters from the end of `string`.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | string | <code>string</code> |  | The string to trim. |
-| [chars] | <code>string</code> | <code>&quot;\&quot; \&quot;&quot;</code> | The characters to trim. |
+| [chars] | <code>string</code> | <code>&quot;​ ​&quot;</code> | The characters to trim. |
 
 <a name="module_ai-scripting-utils.startsWith"></a>
 
@@ -1386,7 +1386,7 @@ Evenly pads the beginning and end of `string` with `chars` until theresulting s
 | --- | --- | --- | --- |
 | string | <code>string</code> |  | The string to pad. |
 | [length] | <code>number</code> | <code>0</code> | The padding length. |
-| [chars] | <code>string</code> | <code>&quot;\&quot; \&quot;&quot;</code> | The padding string. |
+| [chars] | <code>string</code> | <code>&quot;​ ​&quot;</code> | The padding string. |
 
 <a name="module_ai-scripting-utils.padStart"></a>
 
@@ -1399,7 +1399,7 @@ Pads the beginning of `string` with `chars` until the resulting stringreaches `
 | --- | --- | --- | --- |
 | string | <code>string</code> |  | The string to pad. |
 | [length] | <code>number</code> | <code>0</code> | The padding length. |
-| [chars] | <code>string</code> | <code>&quot;\&quot; \&quot;&quot;</code> | The padding string. |
+| [chars] | <code>string</code> | <code>&quot;​ ​&quot;</code> | The padding string. |
 
 <a name="module_ai-scripting-utils.padEnd"></a>
 
@@ -1412,7 +1412,7 @@ Pads the end of `string` with `chars` until the resulting string reaches`length
 | --- | --- | --- | --- |
 | string | <code>string</code> |  | The string to pad. |
 | [length] | <code>number</code> | <code>0</code> | The padding length. |
-| [chars] | <code>string</code> | <code>&quot;\&quot; \&quot;&quot;</code> | The padding string. |
+| [chars] | <code>string</code> | <code>&quot;​ ​&quot;</code> | The padding string. |
 
 <a name="module_ai-scripting-utils.log"></a>
 
