@@ -96,6 +96,8 @@ var rectangle = _.drawRect(20, 10);
         * [.createSpotColor(spot, [tint])](#module_ai-scripting-utils.createSpotColor) ⇒ <code>SpotColor</code>
         * [.getSpot(name, [doc])](#module_ai-scripting-utils.getSpot) ⇒ <code>Spot</code>
         * [.createSpot([options])](#module_ai-scripting-utils.createSpot) ⇒ <code>Spot</code>
+        * [.isDOMCollection(value)](#module_ai-scripting-utils.isDOMCollection) ⇒ <code>boolean</code>
+        * [.isDocument(value)](#module_ai-scripting-utils.isDocument) ⇒ <code>boolean</code>
         * [.isLayer(value)](#module_ai-scripting-utils.isLayer) ⇒ <code>boolean</code>
         * [.isLayerEditable(layer)](#module_ai-scripting-utils.isLayerEditable) ⇒ <code>boolean</code>
         * [.isEditable(value)](#module_ai-scripting-utils.isEditable) ⇒ <code>boolean</code>
@@ -171,9 +173,6 @@ var rectangle = _.drawRect(20, 10);
         * [.random([floating])](#module_ai-scripting-utils.random) ⇒ <code>number</code>
         * [.random(upper, [floating])](#module_ai-scripting-utils.random) ⇒ <code>number</code>
         * [.random(lower, upper, [floating])](#module_ai-scripting-utils.random) ⇒ <code>number</code>
-    * _Utils_
-        * [.isDOMCollection(value)](#module_ai-scripting-utils.isDOMCollection) ⇒ <code>boolean</code>
-        * [.isDocument(value)](#module_ai-scripting-utils.isDocument) ⇒ <code>boolean</code>
 
 <a name="module_ai-scripting-utils.isArray"></a>
 
@@ -673,6 +672,28 @@ Creates a spot.
 | [options.color] | <code>Color</code> |  | The color of the spot. |
 | [options.type] | <code>&quot;spot&quot;</code> \| <code>&quot;process&quot;</code> | <code>&quot;process&quot;</code> | The color model of the spot. |
 | [options.doc] | <code>Document</code> | <code>app.activeDocument</code> | The document where the spot will be created. |
+
+<a name="module_ai-scripting-utils.isDOMCollection"></a>
+
+### _.isDOMCollection(value) ⇒ <code>boolean</code>
+Checks if `value` is a native collection of DOM objects. These objectsare not arrays but they contain children that can be accessed by indexusing bracket notation. Examples of classes that are DOM objectcollections: `Documents`, `Layers`, `PageItems`, `Spots`, `Characters`,etc.
+
+**Returns**: <code>boolean</code> - `true` if `value` is a DOM object collection, `false`otherwise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
+
+<a name="module_ai-scripting-utils.isDocument"></a>
+
+### _.isDocument(value) ⇒ <code>boolean</code>
+Checks if `value` is a `Document` object.
+
+**Returns**: <code>boolean</code> - `true` if `value` is a `Document` object, `false`otherwise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
 <a name="module_ai-scripting-utils.isLayer"></a>
 
@@ -1495,28 +1516,6 @@ Returns a random number between the inclusive `lower` and `upper` bounds.If `fl
 | lower | <code>number</code> |  | The lower bound. |
 | upper | <code>number</code> |  | The upper bound. |
 | [floating] | <code>boolean</code> | <code>false</code> | Whether a floating point number should be returned. |
-
-<a name="module_ai-scripting-utils.isDOMCollection"></a>
-
-### _.isDOMCollection(value) ⇒ <code>boolean</code>
-Checks if `value` is a native collection of DOM objects. These objectsare not arrays but they contain children that can be accessed by indexusing bracket notation. Examples of classes that are DOM objectcollections: `Documents`, `Layers`, `PageItems`, `Spots`, `Characters`,etc.
-
-**Returns**: <code>boolean</code> - `true` if `value` is a DOM object collection, `false`otherwise.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| value | <code>\*</code> | The value to check. |
-
-<a name="module_ai-scripting-utils.isDocument"></a>
-
-### _.isDocument(value) ⇒ <code>boolean</code>
-Checks if `value` is a `Document` object.
-
-**Returns**: <code>boolean</code> - `true` if `value` is a `Document` object, `false`otherwise.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| value | <code>\*</code> | The value to check. |
 
 
 <a name="Rect"></a>

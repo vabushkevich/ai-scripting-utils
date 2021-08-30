@@ -1844,7 +1844,7 @@
      * etc.
      *
      * @memberof module:ai-scripting-utils
-     * @category Utils
+     * @category DOM Functions
      * @param {*} value The value to check.
      * @returns {boolean} `true` if `value` is a DOM object collection, `false`
      * otherwise.
@@ -1857,7 +1857,7 @@
      * Checks if `value` is a `Document` object.
      *
      * @memberof module:ai-scripting-utils
-     * @category Utils
+     * @category DOM Functions
      * @param {*} value The value to check.
      * @returns {boolean} `true` if `value` is a `Document` object, `false`
      * otherwise.
