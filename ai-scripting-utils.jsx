@@ -1163,7 +1163,7 @@
      * @category Rect Functions
      * @param {Rect} rect The rectangle to move.
      * @param {Point} toPoint The point to move to.
-     * @param {Point} [fromPoint=[rect[0], rect[1]] The point to move from.
+     * @param {Point} [fromPoint=[rect[0], rect[1]]] The point to move from.
      * Defaults to the top left corner of `rect`.
      * @returns {Rect} The new moved rectangle.
      */
