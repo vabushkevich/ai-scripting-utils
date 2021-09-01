@@ -443,8 +443,8 @@ Rotates `item` by a given angle.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| item | <code>PageItem</code> | The item to rotate |
-| angle | <code>number</code> | The rotation angle |
+| item | <code>PageItem</code> | The item to rotate. |
+| angle | <code>number</code> | The rotation angle. |
 | [pivotPoint] | [<code>Point</code>](#Point) | The point to rotate about. Defaults to the center point of `item`. |
 
 <a name="module_ai-scripting-utils.eachPageItem"></a>
@@ -1134,7 +1134,7 @@ Returns the position of the desired side of `rect`.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| rect | [<code>Rect</code>](#Rect) | The rectangle to query |
+| rect | [<code>Rect</code>](#Rect) | The rectangle to query. |
 | side | <code>&quot;left&quot;</code> \| <code>&quot;top&quot;</code> \| <code>&quot;right&quot;</code> \| <code>&quot;bottom&quot;</code> \| <code>&quot;centerX&quot;</code> \| <code>&quot;centerY&quot;</code> | The desired side. |
 
 <a name="module_ai-scripting-utils.getRectPoint"></a>

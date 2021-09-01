@@ -897,7 +897,7 @@
      *
      * @memberof module:ai-scripting-utils
      * @category Rect Functions
-     * @param {Rect} rect The rectangle to query
+     * @param {Rect} rect The rectangle to query.
      * @param {("left"|"top"|"right"|"bottom"|"centerX"|"centerY")} side The
      * desired side.
      * @returns {?number} The position of the side of `rect`.
@@ -1404,8 +1404,8 @@
      *
      * @memberof module:ai-scripting-utils
      * @category DOM Functions
-     * @param {PageItem} item The item to rotate
-     * @param {number} angle The rotation angle
+     * @param {PageItem} item The item to rotate.
+     * @param {number} angle The rotation angle.
      * @param {Point} [pivotPoint] The point to rotate about. Defaults to the
      * center point of `item`.
      */
