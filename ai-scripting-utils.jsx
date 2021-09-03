@@ -922,7 +922,7 @@
     }
 
     /**
-     * Returns the point of `rect' from the specified location.
+     * Returns the point of `rect` from the specified location.
      *
      * @memberof module:ai-scripting-utils
      * @category Rect Functions
