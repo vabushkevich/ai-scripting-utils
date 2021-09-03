@@ -1140,7 +1140,7 @@ Returns the position of the desired side of `rect`.
 <a name="module_ai-scripting-utils.getRectPoint"></a>
 
 ### _.getRectPoint(rect, location) ⇒ [<code>Point</code>](#Point)
-Returns the point of `rect' from the specified location.
+Returns the point of `rect` from the specified location.
 
 **Returns**: [<code>Point</code>](#Point) - The point of `rect`.  
 
