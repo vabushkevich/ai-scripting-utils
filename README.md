@@ -11,7 +11,7 @@ The library provides many different helper functions intended to speed up the pr
 
 ## Install
 
-First download the `ai-scripting-utils.jsx` file from this repository: [ai-scripting-utils.jsx](https://raw.githubusercontent.com/vabushkevich/ai-scripting-utils/0.1.0/ai-scripting-utils.jsx).
+First download the `ai-scripting-utils.jsx` file from this repository: [ai-scripting-utils.jsx](https://raw.githubusercontent.com/vabushkevich/ai-scripting-utils/master/ai-scripting-utils.jsx).
 
 ### $.evalFile()
 
