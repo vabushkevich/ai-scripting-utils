@@ -2216,6 +2216,20 @@
         return !!value && value.typename == "Spot";
     }
 
+    /**
+     * Checks if `value` is a registration spot.
+     *
+     * @memberof module:ai-scripting-utils
+     * @category DOM Functions
+     * @param {*} value The value to check.
+     * @returns {boolean} `true` if `value` is a registration spot, `false`
+     * otherwise.
+     */
+    function isRegistrationSpot(value) {
+        return isSpot(value)
+            && value.colorType == ColorModel.REGISTRATION;
+    }
+
     var exports = {};
 
     // Array and Array-Like Functions
@@ -2330,6 +2344,7 @@
     exports.isNoColor = isNoColor;
     exports.isColor = isColor;
     exports.isSpot = isSpot;
+    exports.isRegistrationSpot = isRegistrationSpot;
 
     $.global.importAIScriptingUtils = function () {
         return exports;
