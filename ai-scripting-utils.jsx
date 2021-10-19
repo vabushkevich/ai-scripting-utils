@@ -2230,6 +2230,19 @@
             && value.colorType == ColorModel.REGISTRATION;
     }
 
+    /**
+     * Checks if `value` is a registration color.
+     *
+     * @memberof module:ai-scripting-utils
+     * @category DOM Functions
+     * @param {*} value The value to check.
+     * @returns {boolean} `true` if `value` is a registration color, `false`
+     * otherwise.
+     */
+    function isRegistrationColor(value) {
+        return isSpotColor(value) && isRegistrationSpot(value.spot);
+    }
+
     var exports = {};
 
     // Array and Array-Like Functions
@@ -2345,6 +2358,7 @@
     exports.isColor = isColor;
     exports.isSpot = isSpot;
     exports.isRegistrationSpot = isRegistrationSpot;
+    exports.isRegistrationColor = isRegistrationColor;
 
     $.global.importAIScriptingUtils = function () {
         return exports;
