@@ -1837,6 +1837,26 @@
     }
 
     /**
+     * Creates a registration color.
+     *
+     * @memberof module:ai-scripting-utils
+     * @category DOM Functions
+     * @param {number} [tint=100] The tint of the color.
+     * @param {Document} [doc=app.activeDocument] The document whose spots are
+     * being searched for the registration spot.
+     * @returns {?SpotColor} The new color object.
+     */
+    function createRegistrationColor(tint, doc) {
+        if (doc == null) doc = getActiveDocument();
+        if (!isDocument(doc)) return;
+        var length = doc.spots.length;
+        for (var i = 0; i < length; i++) {
+            var spot = doc.spots[i];
+            if (isRegistrationSpot(spot)) return createSpotColor(spot, tint);
+        }
+    }
+
+    /**
      * Checks if `value` is a native collection of DOM objects. These objects
      * are not arrays but they contain children that can be accessed by index
      * using bracket notation. Examples of classes that are DOM object
@@ -2330,6 +2350,7 @@
     exports.createSpotColor = createSpotColor;
     exports.getSpot = getSpot;
     exports.createSpot = createSpot;
+    exports.createRegistrationColor = createRegistrationColor;
     exports.isDOMCollection = isDOMCollection;
     exports.isDocument = isDocument;
     exports.isLayer = isLayer;
