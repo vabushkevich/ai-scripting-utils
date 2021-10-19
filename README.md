@@ -96,6 +96,7 @@ var rectangle = _.drawRect(20, 10);
         * [.createSpotColor(spot, [tint])](#module_ai-scripting-utils.createSpotColor) ⇒ <code>SpotColor</code>
         * [.getSpot(name, [doc])](#module_ai-scripting-utils.getSpot) ⇒ <code>Spot</code>
         * [.createSpot([options])](#module_ai-scripting-utils.createSpot) ⇒ <code>Spot</code>
+        * [.createRegistrationColor([tint], [doc])](#module_ai-scripting-utils.createRegistrationColor) ⇒ <code>SpotColor</code>
         * [.isDOMCollection(value)](#module_ai-scripting-utils.isDOMCollection) ⇒ <code>boolean</code>
         * [.isDocument(value)](#module_ai-scripting-utils.isDocument) ⇒ <code>boolean</code>
         * [.isLayer(value)](#module_ai-scripting-utils.isLayer) ⇒ <code>boolean</code>
@@ -123,6 +124,8 @@ var rectangle = _.drawRect(20, 10);
         * [.isNoColor(value)](#module_ai-scripting-utils.isNoColor) ⇒ <code>boolean</code>
         * [.isColor(value)](#module_ai-scripting-utils.isColor) ⇒ <code>boolean</code>
         * [.isSpot(value)](#module_ai-scripting-utils.isSpot) ⇒ <code>boolean</code>
+        * [.isRegistrationSpot(value)](#module_ai-scripting-utils.isRegistrationSpot) ⇒ <code>boolean</code>
+        * [.isRegistrationColor(value)](#module_ai-scripting-utils.isRegistrationColor) ⇒ <code>boolean</code>
     * _Object Functions_
         * [.assign(object, [...sources])](#module_ai-scripting-utils.assign) ⇒ <code>Object</code>
         * [.defaults(object, [...sources])](#module_ai-scripting-utils.defaults) ⇒ <code>Object</code>
@@ -673,6 +676,18 @@ Creates a spot.
 | [options.type] | <code>&quot;spot&quot;</code> \| <code>&quot;process&quot;</code> | <code>&quot;process&quot;</code> | The color model of the spot. |
 | [options.doc] | <code>Document</code> | <code>app.activeDocument</code> | The document where the spot will be created. |
 
+<a name="module_ai-scripting-utils.createRegistrationColor"></a>
+
+### _.createRegistrationColor([tint], [doc]) ⇒ <code>SpotColor</code>
+Creates a registration color.
+
+**Returns**: <code>SpotColor</code> - The new color object.  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [tint] | <code>number</code> | <code>100</code> | The tint of the color. |
+| [doc] | <code>Document</code> | <code>app.activeDocument</code> | The document whose spots are being searched for the registration spot. |
+
 <a name="module_ai-scripting-utils.isDOMCollection"></a>
 
 ### _.isDOMCollection(value) ⇒ <code>boolean</code>
@@ -965,6 +980,28 @@ Checks if `value` is a `Color` object.
 Checks if `value` is a `Spot` object.
 
 **Returns**: <code>boolean</code> - `true` if `value` is a `Spot` object, `false`otherwise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
+
+<a name="module_ai-scripting-utils.isRegistrationSpot"></a>
+
+### _.isRegistrationSpot(value) ⇒ <code>boolean</code>
+Checks if `value` is a registration spot.
+
+**Returns**: <code>boolean</code> - `true` if `value` is a registration spot, `false`otherwise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
+
+<a name="module_ai-scripting-utils.isRegistrationColor"></a>
+
+### _.isRegistrationColor(value) ⇒ <code>boolean</code>
+Checks if `value` is a registration color.
+
+**Returns**: <code>boolean</code> - `true` if `value` is a registration color, `false`otherwise.  
 
 | Param | Type | Description |
 | --- | --- | --- |
