@@ -50,6 +50,81 @@ var _ = importAIScriptingUtils();
 var rectangle = _.drawRect(20, 10);
 ```
 
+## Usage Examples
+
+### Remove Small Items
+
+This script removes items that have width or height smaller than 1 pt:
+
+```javascript
+var _ = $.evalFile($.fileName + "/../ai-scripting-utils.jsx");
+
+var doc = _.getActiveDocument();
+var minSize = 1;
+var smallItems = [];
+
+_.eachPageItem(doc, function (item) {
+  if (item.width < minSize || item.height < minSize) smallItems.push(item);
+}, { skipHidden: true, skipLocked: true });
+
+_.each(smallItems, function (item) {
+  item.remove();
+});
+```
+
+Result:
+
+![01](https://user-images.githubusercontent.com/23465488/137976368-2fbc50b5-79fa-4758-b54b-de60679466c9.png)
+
+### Draw Crop Marks
+
+This script draws crop marks around all visible and non-locked page items:
+
+```javascript
+var _ = $.evalFile($.fileName + "/../ai-scripting-utils.jsx");
+
+var doc = _.getActiveDocument();
+var layer = _.createLayer("Crop Marks");
+var margin = 10;
+var itemsRect;
+var trimRect;
+
+// Build an area around the doc's page items
+_.eachPageItem(doc, function (item) {
+  var itemRect = item.visibleBounds;
+  itemsRect = _.includeRects(itemRect, itemsRect || itemRect);
+}, { skipHidden: true, skipLocked: true });
+
+// Set up drawing options
+doc.defaultFilled = false;
+doc.defaultStrokeColor = _.createRegistrationColor();
+// Add margins around the items area
+trimRect = _.offsetRect(itemsRect, margin);
+
+// Define locations where to place crop marks around the trim area.
+// Basically, these are the corners of the trim area.
+var sidePairs = [
+  ["left", "top"], ["left", "bottom"],
+  ["right", "bottom"], ["right", "top"]
+];
+
+// For each crop marks location...
+_.each(sidePairs, function (sidePair, i) {
+  // Draw crop marks inside a group
+  var group = _.createGroup("Crop Marks", layer);
+  _.drawLine([-5, 0], [-20, 0], group);
+  _.drawLine([0, 5], [0, 20], group);
+  group.rotate(90 * i);
+  // Place the crop marks in the specified location
+  _.offsetFrom(group, trimRect, sidePair[0]);
+  _.offsetFrom(group, trimRect, sidePair[1]);
+});
+```
+
+Result:
+
+![02](https://user-images.githubusercontent.com/23465488/137976437-46a814cf-a1ac-4822-9cd7-83cf38f903db.png)
+
 ## API Reference
 
 {{#module name="ai-scripting-utils"}}
