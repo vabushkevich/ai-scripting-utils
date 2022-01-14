@@ -428,7 +428,7 @@ Checks if `collection` includes `value`.
 <a name="module_ai-scripting-utils.clone"></a>
 
 ### _.clone(array) ⇒ <code>Array</code>
-Creates a clone of `array`.
+Creates a shallow clone of `array`.
 
 **Returns**: <code>Array</code> - The cloned array.  
 

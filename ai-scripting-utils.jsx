@@ -336,7 +336,7 @@
     }
 
     /**
-     * Creates a clone of `array`.
+     * Creates a shallow clone of `array`.
      *
      * @memberof module:ai-scripting-utils
      * @category Array and Array-Like Functions
