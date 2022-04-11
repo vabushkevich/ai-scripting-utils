@@ -8,10 +8,7 @@
     "docs": "jsdoc2md -t jsdoc2md/README.hbs --partial jsdoc2md/body.hbs -f ai-scripting-utils.jsx > README.md"
   },
   "keywords": ["util", "ai" ,"illustrator"],
-  "author": {
-    "name" : "Vyacheslav Abushkevich",
-    "email" : "abshkvch@gmail.com"
-  },
+  "author": "Vyacheslav Abushkevich <abshkvch@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "jsdoc-to-markdown": "^7.1.1"
