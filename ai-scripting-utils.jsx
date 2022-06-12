@@ -1751,7 +1751,7 @@
      *
      * @memberof module:ai-scripting-utils
      * @category DOM Functions
-     * @param {PageItem} rect The item to place.
+     * @param {PageItem} item The item to place.
      * @param {(PageItem|Rect)} target The target to offset from.
      * @param {("left"|"top"|"right"|"bottom")} side The side of `target` to
      * offset from.

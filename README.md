@@ -199,7 +199,7 @@ Result:
         * [.isSpotColor(value)](#module_ai-scripting-utils.isSpotColor) ⇒ <code>boolean</code>
         * [.isTextFrame(value)](#module_ai-scripting-utils.isTextFrame) ⇒ <code>boolean</code>
         * [.move(item, toPoint, [options])](#module_ai-scripting-utils.move)
-        * [.offsetFrom(rect, target, side, [options])](#module_ai-scripting-utils.offsetFrom)
+        * [.offsetFrom(item, target, side, [options])](#module_ai-scripting-utils.offsetFrom)
         * [.rotate(item, angle, [pivotPoint])](#module_ai-scripting-utils.rotate)
     * _Object Functions_
         * [.assign(object, [...sources])](#module_ai-scripting-utils.assign) ⇒ <code>Object</code>
@@ -1057,13 +1057,13 @@ Moves `item` to the specified point.
 
 <a name="module_ai-scripting-utils.offsetFrom"></a>
 
-### _.offsetFrom(rect, target, side, [options])
+### _.offsetFrom(item, target, side, [options])
 Places `item` from `target` with an offset.
 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| rect | <code>PageItem</code> |  | The item to place. |
+| item | <code>PageItem</code> |  | The item to place. |
 | target | <code>PageItem</code> \| [<code>Rect</code>](#Rect) |  | The target to offset from. |
 | side | <code>&quot;left&quot;</code> \| <code>&quot;top&quot;</code> \| <code>&quot;right&quot;</code> \| <code>&quot;bottom&quot;</code> |  | The side of `target` to offset from. |
 | [options] | <code>Object</code> |  |  |
