@@ -4,7 +4,6 @@
   "description": "A JavaScript utility library to use inside Adobe Illustrator scripting environment.",
   "main": "ai-scripting-utils.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "jsdoc2md -t jsdoc2md/README.hbs --partial jsdoc2md/body.hbs -f ai-scripting-utils.jsx > README.md"
   },
   "keywords": ["util", "ai" ,"illustrator"],
