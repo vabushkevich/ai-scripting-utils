@@ -9,7 +9,7 @@ The library provides many different helper functions intended to speed up the pr
 - [`Rect`](#Rect) objects that are just arrays representing rectangles (e.g. `pathItem.geometricBounds`)
 - [`Point`](#Point) objects
 
-## Install
+## Usage
 
 First download the `ai-scripting-utils.jsx` file from this repository: [ai-scripting-utils.jsx](https://raw.githubusercontent.com/vabushkevich/ai-scripting-utils/master/ai-scripting-utils.jsx). Then you should use one of the following methods to start using the library.
 
