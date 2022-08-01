@@ -4,7 +4,7 @@
   "description": "A JavaScript utility library to use inside Adobe Illustrator scripting environment.",
   "main": "ai-scripting-utils.jsx",
   "scripts": {
-    "docs": "jsdoc2md -t jsdoc2md/README.hbs --partial jsdoc2md/body.hbs -f ai-scripting-utils.jsx > README.md"
+    "docs": "jsdoc2md -t docs/jsdoc2md/README.hbs --partial docs/jsdoc2md/body.hbs -f ai-scripting-utils.jsx > docs/README.md"
   },
   "keywords": ["util", "ai" ,"illustrator"],
   "author": "Vyacheslav Abushkevich <abshkvch@gmail.com>",
