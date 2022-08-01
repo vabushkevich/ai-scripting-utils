@@ -50,7 +50,7 @@ var _ = importAIScriptingUtils();
 var rectangle = _.drawRect(20, 10);
 ```
 
-## Usage Examples
+## Examples
 
 ### Remove Small Items
 
