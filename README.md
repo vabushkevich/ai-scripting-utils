@@ -6,8 +6,8 @@ The library provides many different helper functions intended to speed up the pr
 
 - Native JavaScript objects and primitives
 - DOM objects
-- `Rect` objects that are just arrays representing rectangles (e.g. `pathItem.geometricBounds`)
-- `Point` objects
+- `Rect` objects that are arrays of 4 numbers (e.g. `pathItem.geometricBounds`)
+- `Point` objects that are arrays of 2 numbers (e.g. `pathItem.position`)
 
 ## Documentation
 
