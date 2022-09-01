@@ -2007,7 +2007,7 @@
 
         if (length) {
             if (typeof reducer != "function") return array[i];
-            if (accumulator == null) accumulator = array[i++];
+            if (arguments.length < 3) accumulator = array[i++];
         }
 
         for (; i < length; i++) {
@@ -2034,7 +2034,7 @@
 
         if (length) {
             if (typeof reducer != "function") return array[i];
-            if (accumulator == null) accumulator = array[i--];
+            if (arguments.length < 3) accumulator = array[i--];
         }
 
         for (; i >= 0; i--) {
