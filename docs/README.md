@@ -570,9 +570,9 @@ Traverses a tree of `PageItem` objects starting from a specific root.This func
 <a name="module_ai-scripting-utils.getActiveDocument"></a>
 
 ### _.getActiveDocument() ⇒ <code>Document</code>
-Returns `app.activeDocument`. This function gets rid of constant checkingif the app contains documents. If the app doesn't contain any documentsaccessing `app.activeDocument` will result in an error.
+Gets the active document.If there are no documents open, accessing `app.activeDocument` willresult in an error. In such a case this function just returns `null`,making getting the active document more convenient.
 
-**Returns**: <code>Document</code> - The active document.  
+**Returns**: <code>Document</code> - `app.activeDocument` or `null` if there are nodocuments open.  
 <a name="module_ai-scripting-utils.getLayer"></a>
 
 ### _.getLayer(name, [container]) ⇒ <code>Layer</code>

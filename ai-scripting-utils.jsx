@@ -824,13 +824,16 @@
     }
 
     /**
-     * Returns `app.activeDocument`. This function gets rid of constant checking
-     * if the app contains documents. If the app doesn't contain any documents
-     * accessing `app.activeDocument` will result in an error.
+     * Gets the active document.
+     *
+     * If there are no documents open, accessing `app.activeDocument` will
+     * result in an error. In such a case this function just returns `null`,
+     * making getting the active document more convenient.
      *
      * @memberof module:ai-scripting-utils
      * @category DOM Functions
-     * @returns {?Document} The active document.
+     * @returns {?Document} `app.activeDocument` or `null` if there are no
+     * documents open.
      */
     function getActiveDocument() {
         return app.documents.length > 0 ? app.activeDocument : null;
