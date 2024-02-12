@@ -19,8 +19,8 @@
         * [.last(array)](#module_ai-scripting-utils.last) ⇒ <code>\*</code>
         * [.lastIndexOf(array, value, [fromIndex])](#module_ai-scripting-utils.lastIndexOf) ⇒ <code>number</code>
         * [.map(array, callback)](#module_ai-scripting-utils.map) ⇒ <code>Array</code>
-        * [.reduce(array, callback, accumulator)](#module_ai-scripting-utils.reduce) ⇒ <code>\*</code>
-        * [.reduceRight(array, callback, accumulator)](#module_ai-scripting-utils.reduceRight) ⇒ <code>\*</code>
+        * [.reduce(array, callback, [accumulator])](#module_ai-scripting-utils.reduce) ⇒ <code>\*</code>
+        * [.reduceRight(array, callback, [accumulator])](#module_ai-scripting-utils.reduceRight) ⇒ <code>\*</code>
         * [.shuffle(array)](#module_ai-scripting-utils.shuffle) ⇒ <code>Array</code>
         * [.some(array, callback)](#module_ai-scripting-utils.some) ⇒ <code>boolean</code>
     * _DOM Functions_
@@ -298,8 +298,8 @@ Creates a new array populated with the results of `callback` invocationfor each
 
 <a name="module_ai-scripting-utils.reduce"></a>
 
-### _.reduce(array, callback, accumulator) ⇒ <code>\*</code>
-Executes `reducer` for each element of `array`, resulting in a singleoutput value. The callback takes four arguments: `accumulator`, `value`,`index`, `array`.
+### _.reduce(array, callback, [accumulator]) ⇒ <code>\*</code>
+Executes `callback` for each element of `array`, resulting in a singleoutput value. If `accumulator` is not given, the first element of `array`is used as the initial value. The callback takes four arguments:`accumulator`, `value`, `index`, `array`.
 
 **Returns**: <code>\*</code> - The accumulated value.  
 
@@ -307,12 +307,12 @@ Executes `reducer` for each element of `array`, resulting in a singleoutput val
 | --- | --- | --- |
 | array | <code>Array</code> | The array to iterate over. |
 | callback | <code>function</code> | The function called for each element. |
-| accumulator | <code>\*</code> | The initial value. |
+| [accumulator] | <code>\*</code> | The initial value. |
 
 <a name="module_ai-scripting-utils.reduceRight"></a>
 
-### _.reduceRight(array, callback, accumulator) ⇒ <code>\*</code>
-This function is like `reduce` except that it iterates over elements of`array` from right to left.
+### _.reduceRight(array, callback, [accumulator]) ⇒ <code>\*</code>
+This function is like `reduce` except that it iterates over elements of`array` from right to left, and if `accumulator` is not given, the lastelement of `array` is used as the initial value.
 
 **Returns**: <code>\*</code> - The accumulated value.  
 
@@ -320,7 +320,7 @@ This function is like `reduce` except that it iterates over elements of`array` 
 | --- | --- | --- |
 | array | <code>Array</code> | The array to iterate over. |
 | callback | <code>function</code> | The function called for each element. |
-| accumulator | <code>\*</code> | The initial value. |
+| [accumulator] | <code>\*</code> | The initial value. |
 
 <a name="module_ai-scripting-utils.shuffle"></a>
 

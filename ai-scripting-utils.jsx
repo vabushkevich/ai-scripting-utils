@@ -1993,28 +1993,29 @@
     }
 
     /**
-     * Executes `reducer` for each element of `array`, resulting in a single
-     * output value. The callback takes four arguments: `accumulator`, `value`,
-     * `index`, `array`.
+     * Executes `callback` for each element of `array`, resulting in a single
+     * output value. If `accumulator` is not given, the first element of `array`
+     * is used as the initial value. The callback takes four arguments:
+     * `accumulator`, `value`, `index`, `array`.
      *
      * @memberof module:ai-scripting-utils
      * @category Array and Array-Like Functions
      * @param {Array} array The array to iterate over.
      * @param {Function} callback The function called for each element.
-     * @param {*} accumulator The initial value.
+     * @param {*} [accumulator] The initial value.
      * @returns {*} The accumulated value.
      */
-    function reduce(array, reducer, accumulator) {
+    function reduce(array, callback, accumulator) {
         var length = array == null ? 0 : array.length;
         var i = 0;
 
         if (length) {
-            if (typeof reducer != "function") return array[i];
+            if (typeof callback != "function") return array[i];
             if (arguments.length < 3) accumulator = array[i++];
         }
 
         for (; i < length; i++) {
-            accumulator = reducer(accumulator, array[i], i, array);
+            accumulator = callback(accumulator, array[i], i, array);
         }
 
         return accumulator;
@@ -2022,26 +2023,27 @@
 
     /**
      * This function is like `reduce` except that it iterates over elements of
-     * `array` from right to left.
+     * `array` from right to left, and if `accumulator` is not given, the last
+     * element of `array` is used as the initial value.
      *
      * @memberof module:ai-scripting-utils
      * @category Array and Array-Like Functions
      * @param {Array} array The array to iterate over.
      * @param {Function} callback The function called for each element.
-     * @param {*} accumulator The initial value.
+     * @param {*} [accumulator] The initial value.
      * @returns {*} The accumulated value.
      */
-    function reduceRight(array, reducer, accumulator) {
+    function reduceRight(array, callback, accumulator) {
         var length = array == null ? 0 : array.length;
         var i = length - 1;
 
         if (length) {
-            if (typeof reducer != "function") return array[i];
+            if (typeof callback != "function") return array[i];
             if (arguments.length < 3) accumulator = array[i--];
         }
 
         for (; i >= 0; i--) {
-            accumulator = reducer(accumulator, array[i], i, array);
+            accumulator = callback(accumulator, array[i], i, array);
         }
 
         return accumulator;
