@@ -1,6 +1,6 @@
 {
   "name": "ai-scripting-utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A JavaScript utility library to use inside Adobe Illustrator scripting environment.",
   "main": "ai-scripting-utils.jsx",
   "scripts": {
