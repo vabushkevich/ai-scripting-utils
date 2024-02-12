@@ -1980,16 +1980,22 @@
             floating = arg2;
         }
 
+        lower = Number(lower);
+        upper = Number(upper);
+        floating = Boolean(floating);
+
+        if (isNaN(lower) || isNaN(upper)) return 0;
+
         if (lower % 1 != 0 || upper % 1 != 0) floating = true;
         if (lower > upper) {
             var tmp = lower;
             lower = upper;
             upper = tmp;
         }
+        if (!floating) upper += 1;
 
-        var result = +lower + (upper - lower) * Math.random();
-        if (isNaN(result)) return 0;
-        return floating ? result : Math.round(result);
+        var result = lower + (upper - lower) * Math.random();
+        return floating ? result : Math.floor(result);
     }
 
     /**
