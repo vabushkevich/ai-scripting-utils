@@ -2124,7 +2124,7 @@
         var result = new Array(length);
 
         for (var i = 0; i < length; i++) {
-            var j = Math.round(Math.random() * i);
+            var j = Math.floor(Math.random() * (i + 1));
             result[i] = result[j];
             result[j] = array[i];
         }
